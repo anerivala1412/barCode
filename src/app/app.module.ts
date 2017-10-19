@@ -6,11 +6,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { ScannedPage } from '../pages/scanned/scanned';
+import { NotFoundPage } from '../pages/not-found/not-found';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ScannedPage,
+    NotFoundPage
   ],
   imports: [
     BrowserModule,
@@ -19,12 +24,15 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ScannedPage,
+    NotFoundPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    BarcodeScanner,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

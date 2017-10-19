@@ -1,14 +1,23 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title text-center>
+      Generate Barcode
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="cards-bg">
+  <ion-card class="cards-list-demo" (click)="load()">
+    <ion-list no-lines>
+      <ion-item text-center>
+        <ion-icon name='barcode' color="secondary"></ion-icon>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item text-center>
+        <button ion-button color="secondary" class="button-class" round>Scan</button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
 </ion-content>

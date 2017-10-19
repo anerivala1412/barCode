@@ -1,3 +1,16 @@
-page-home {
-
+page-home{
+background-color: lightgreen;
+ion-card.cards-list-demo ion-card-header {
+  color: map-get($colors, primary);
+}
+ion-icon {
+    display: inline-block;
+    font-size: 5.5em;
+}
+.button-class{
+    font-size: 2.1rem;
+}
+ion-card{
+    border-radius: 45px;
+}
 }
